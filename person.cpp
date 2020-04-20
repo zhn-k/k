@@ -1,7 +1,7 @@
 
 #include "person.h"
 using namespace std;
-person::person():person(0,"none","none"){}
+
 
 person::person( int year,  char *name,  char *surname)
 {
@@ -13,17 +13,16 @@ person::person( int year,  char *name,  char *surname)
   setYear(year);
 }
 
-person& person::operator =(person person0)
-{
-   setName(name);
-  setSurname(surname);
-  setYear(year);
-  return *this;
-}
+
+person::person( person&p):person(p.year, p.name, p.surname){}
 void person::setYear(int year)
 {
     this->year=year;
 }
+int person::getYear()
+    {
+        return year;
+    }
 void person::setName(char *name)
 {
    delete [] this->name;
@@ -42,7 +41,6 @@ char *person::getSurname(char *s)
 {
 char *save = s;
 char *from = this->surname;
-
 while (*s++ = *from++);
 return(save);
 }
@@ -50,50 +48,20 @@ char *person::getName(char *S)
  {
 char *Save = S;
 char *From = this->name;
-
 while (*S++ = *From++);
 return(Save);
 }
-int person::getYear()
-    {
-        return year;
-    }
+
 
     person::~person()
     {
         delete [] name;
         delete [] surname;
     }
-    void person::print()
+     void person::print()
 {
-    cout << "year = " << year << "\nname = "<< name << "\nsurname = " << surname << "\n";
+    cout << "year = " << year << "\tname = "<< name << "\tsurname = " << surname << "\n";
+
 }
 
-   bool operator> (const person  &person0, const person  &person01)
-{
-    return (person0.year > person01.year);
-}
 
-bool operator>= (const person  &person0, const person  &person01)
-{
-    return (person0.year >= person01.year);
-}
-
-bool operator< (const person  &person0, const person  &person01)
-{
-    return (person0.year < person01.year);
-}
-
-bool operator<= (const person  &person0, const person  &person01)
-{
-    return (person0.year <= person01.year) ;
-}
-bool operator== (const person  &person0, const person  &person01)
-{
-    return (person0.year == person01.year);
-}
-
-bool operator!= (const person  &person0, const person  &person01)
-{
-    return (person0.year != person01.year) ;
-}

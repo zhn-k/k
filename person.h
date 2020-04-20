@@ -1,19 +1,21 @@
+#pragma once
 #ifndef PERSON_H_INCLUDED
 #define PERSON_H_INCLUDED
-
+using namespace std;
 #include<iostream>
 #include<cstring>
 class person {
 
-private:
+protected:
     int year;
     char *name;
     char *surname;
-
-public:
-    person();
+  public:
     person(int year, char *name, char *surname);
-    person&operator =(person person0);
+
+    person();
+    person(person &p);
+
 
     void setYear(int);
     void setName(char *);
@@ -22,14 +24,9 @@ public:
     char *getName(char *);
     char *getSurname(char *);
     ~person();
-    void print();
+    virtual void print()=0;
 
-    friend bool operator > (const person  &person0, const person  &person01);
-    friend bool operator <= (const person  &person0, const person  &person01);
-    friend bool operator < (const person  &person0, const person  &person01);
-    friend bool operator >= (const person  &person0, const person  &person01);
-    friend bool operator != (const person  &person0, const person  &person01);
-    friend bool operator == (const person  &person0, const person  &person01);
+
 
 };
 #endif // PERSON_H_INCLUDED
