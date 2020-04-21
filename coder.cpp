@@ -14,13 +14,13 @@ void coder::setName_project(char *name_project)
     this-> name_project = new char[len+1];
     strcpy(this->name_project, name_project);
 }
-char *coder::getName_project(char *s)
+char *coder::getName_project(char *s)const
 {
     char *save = s;
     char *from = this->name_project;
     while (*s++ = *from++);
     return(save);
 }
-     void coder::print()
+     void coder::print()const
 {
     cout << "year = " << year << "\tname = "<< name << "\tsurname = " << surname << "\tname_project="<<name_project<<endl;}

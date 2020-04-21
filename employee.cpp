@@ -5,7 +5,7 @@ employee::employee():employee(0,"none","none"){}
 employee::employee( employee&c):employee(c.year, c.name, c.surname){}
 
 
-     void employee::print()
+     void employee::print()const
 {
     cout << "year = " << year << "\tname = "<< name << "\tsurname = " << surname << endl;
 }

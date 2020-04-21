@@ -10,8 +10,8 @@ manager();
  manager(manager &cl);
     manager(int year, char *name, char *surname, int namber);
     void setNumber(int);
-      int getNumber();
-  void print()override;
+      int getNumber()const;
+  void print()override const;
 
 };
 

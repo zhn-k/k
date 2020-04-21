@@ -10,11 +10,12 @@ void manager::setNumber(int number)
 {
     this->number=number;
 }
-int manager::getNumber()
+int manager::getNumber() const
     {
         return number;
     }
 
-     void manager::print()
+     void manager::print()const
+
 {
     cout << "year = " << year << "\tname = "<< name << "\tsurname = " << surname << "\tnumber="<<number<<endl;}

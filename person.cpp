@@ -19,7 +19,7 @@ void person::setYear(int year)
 {
     this->year=year;
 }
-int person::getYear()
+int person::getYear()const
     {
         return year;
     }
@@ -37,14 +37,14 @@ void person::setSurname(char *surname)
    this-> surname = new char[len+1];
    strcpy(this->surname, surname);
 }
-char *person::getSurname(char *s)
+char *person::getSurname(char *s)const
 {
 char *save = s;
 char *from = this->surname;
 while (*s++ = *from++);
 return(save);
 }
-char *person::getName(char *S)
+char *person::getName(char *S)const
  {
 char *Save = S;
 char *From = this->name;
@@ -58,7 +58,7 @@ return(Save);
         delete [] name;
         delete [] surname;
     }
-     void person::print()
+     void person::print()const
 {
     cout << "year = " << year << "\tname = "<< name << "\tsurname = " << surname << "\n";
 

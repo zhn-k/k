@@ -8,7 +8,7 @@ public:
     employee(employee &cl);
     employee(int year, char *name, char *surname );
 
- virtual void print()=0;
+ virtual void print()=0 const;
     friend bool operator > ( const employee  &person0,  const employee  &person01);
     friend bool operator <= (const employee  &person0, const employee  &person01);
     friend bool operator < (const employee  &person0, const employee  &person01);

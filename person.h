@@ -20,11 +20,11 @@ protected:
     void setYear(int);
     void setName(char *);
     void setSurname(char *);
-    int getYear();
-    char *getName(char *);
-    char *getSurname(char *);
+    int getYear() const;
+    char *getName(char *)const;
+    char *getSurname(char *)const;
     ~person();
-    virtual void print()=0;
+    virtual void print()=0 const;
 
 
 

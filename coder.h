@@ -11,8 +11,8 @@ public:
 
     coder(int year, char *name, char *surname, char *name_project);
     void setName_project(char *);
-    char *getName_project(char *);
-  void print()override;
+    char *getName_project(char *)const;
+  void print()override const;
 
 };
 
