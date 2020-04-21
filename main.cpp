@@ -18,7 +18,21 @@ char *buff1 = buff;
 cout<<"Information about person\n"<<"information about client (input 1)\n"<<"information about manager (input 2)\n"<<"information about coder (input 3)\n"<<endl;
 cin>>i;
 if (i==1)
-{cin>>name>>surname>>year>>name_object;
+{cout << "Enter the age: ";
+cin >> year;
+cout << "\n";
+
+cout << "Enter name: ";
+cin >> name;
+cout << "\n";
+
+cout << "Enter surname: ";
+cin >> surname;
+cout << "\n";
+
+cout << "Enter name_object: ";
+cin >> name_object;
+cout << "\n";
 client cv(year, name, surname,name_object);
 cv.print();
 client p3(10, "Bob", "Potter","moon");
@@ -30,7 +44,21 @@ client cc;
 cc.print();
 }
 if (i==2)
-{cin>>name>>surname>>year>>number;
+{cout << "Enter the age: ";
+cin >> year;
+cout << "\n";
+
+cout << "Enter name: ";
+cin >> name;
+cout << "\n";
+
+cout << "Enter surname: ";
+cin >> surname;
+cout << "\n";
+
+cout << "Enter number: ";
+cin >> number;
+cout << "\n";
 manager cv(year, name, surname,number);
 cv.print();
 manager p3(10, "Bob", "Potter",0);
@@ -41,7 +69,21 @@ p4.print();
 manager cc;
 cc.print();
 }if (i==3)
-{cin>>name>>surname>>year>>name_object;
+{cout << "Enter the age: ";
+cin >> year;
+cout << "\n";
+
+cout << "Enter name: ";
+cin >> name;
+cout << "\n";
+
+cout << "Enter surname: ";
+cin >> surname;
+cout << "\n";
+
+cout << "Enter name_object: ";
+cin >> name_object;
+cout << "\n";
 coder cv(year, name, surname,name_object);
 cv.print();
 cin>>name>>surname>>year>>name_object;

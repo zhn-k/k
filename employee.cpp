@@ -10,7 +10,7 @@ employee::employee( employee&c):employee(c.year, c.name, c.surname){}
     cout << "year = " << year << "\tname = "<< name << "\tsurname = " << surname << endl;
 }
 
-   bool operator> (employee &person0, employee  &person01)
+   bool operator> (const employee &person0, const employee  &person01)
 {
     return (person0.year > person01.year);
 }
